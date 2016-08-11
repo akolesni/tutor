@@ -81,6 +81,7 @@
     <ClInclude Include="NewTestClass1.h" />
     <ClInclude Include="NewTestClass2.h" />
     <ClInclude Include="NewTestClass3.h" />
+    <ClInclude Include="ParamHelper.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -89,6 +90,7 @@
     <ClCompile Include="NewTestClass1.cpp" />
     <ClCompile Include="NewTestClass2.cpp" />
     <ClCompile Include="NewTestClass3.cpp" />
+    <ClCompile Include="ParamHelper.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
