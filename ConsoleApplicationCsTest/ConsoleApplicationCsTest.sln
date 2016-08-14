@@ -5,6 +5,14 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplicationCsTest", "ConsoleApplicationCsTest\ConsoleApplicationCsTest.csproj", "{3C4C5B49-AB77-44AD-AE60-F6B2DC5D983F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MEF", "MEF", "{31AD5173-DDF6-4A93-A2B7-EB83ACF3352E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICar", "iCar\ICar.csproj", "{530DC1BE-7954-41D9-BEE9-26EAE5011023}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarMercedes", "CarMercedes\CarMercedes.csproj", "{484DFFC0-EBC5-4EB3-9C53-BB5D3A16CEFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarBMW", "CarBMW\CarBMW.csproj", "{B25C7660-C52E-4A70-B5DC-E3063B212AB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +23,25 @@ Global
 		{3C4C5B49-AB77-44AD-AE60-F6B2DC5D983F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C4C5B49-AB77-44AD-AE60-F6B2DC5D983F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C4C5B49-AB77-44AD-AE60-F6B2DC5D983F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530DC1BE-7954-41D9-BEE9-26EAE5011023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530DC1BE-7954-41D9-BEE9-26EAE5011023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530DC1BE-7954-41D9-BEE9-26EAE5011023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530DC1BE-7954-41D9-BEE9-26EAE5011023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{484DFFC0-EBC5-4EB3-9C53-BB5D3A16CEFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{484DFFC0-EBC5-4EB3-9C53-BB5D3A16CEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{484DFFC0-EBC5-4EB3-9C53-BB5D3A16CEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{484DFFC0-EBC5-4EB3-9C53-BB5D3A16CEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B25C7660-C52E-4A70-B5DC-E3063B212AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B25C7660-C52E-4A70-B5DC-E3063B212AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B25C7660-C52E-4A70-B5DC-E3063B212AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B25C7660-C52E-4A70-B5DC-E3063B212AB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{530DC1BE-7954-41D9-BEE9-26EAE5011023} = {31AD5173-DDF6-4A93-A2B7-EB83ACF3352E}
+		{484DFFC0-EBC5-4EB3-9C53-BB5D3A16CEFD} = {31AD5173-DDF6-4A93-A2B7-EB83ACF3352E}
+		{B25C7660-C52E-4A70-B5DC-E3063B212AB5} = {31AD5173-DDF6-4A93-A2B7-EB83ACF3352E}
 	EndGlobalSection
 EndGlobal

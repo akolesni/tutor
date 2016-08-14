@@ -6,11 +6,21 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplicationCsTest
 {
-    class Program
+  using ConsoleApplicationCsTest.MEF;
+
+  internal class Program
+  {
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            //Environment.CommandLine.
-        }
+      //Environment.CommandLine.
+      MefTest mefTest = new MefTest();
+      mefTest.Do();
+
+
+
+
+      //--------------------
+      Console.ReadLine();
     }
+  }
 }
