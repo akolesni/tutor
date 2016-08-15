@@ -39,7 +39,10 @@
     <ClInclude Include="include\BoostLog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BoostStringTest.h">
+    <ClInclude Include="include\BoostStringTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BoostProgramOptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -65,7 +68,10 @@
     <ClCompile Include="src\BoostLog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BoostStringTest.cpp">
+    <ClCompile Include="src\BoostStringTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BoostProgramOptions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

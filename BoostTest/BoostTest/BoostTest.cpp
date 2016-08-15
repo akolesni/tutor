@@ -5,11 +5,12 @@
 //#include "BoostDateTime.h"
 //#include "BoostFilesystem.h"
 //#include "BoostTimer.h"
-#include "BoostLog.h"
-#include "BoostStringTest.h"
+//#include "BoostLog.h"
+//#include "BoostStringTest.h"
+#include "BoostProgramOptions.h"
 #include <system_error>
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
   //BoostChrono boost_chrono;
   //boost_chrono.Do();
@@ -21,8 +22,12 @@ int _tmain(int argc, _TCHAR* argv[])
   //boost_timer.Do();
   //BoostLog boost_log;
   //boost_log.Do();
-	BoostStringTest boost_string_test;
-	boost_string_test.Do();
+	//BoostStringTest boost_string_test;
+	//boost_string_test.Do();
+	BoostProgramOptions boostProgramOptions;
+	boostProgramOptions.Do(argc, argv);
+
+
 
 	system("pause");
 	return 0;
