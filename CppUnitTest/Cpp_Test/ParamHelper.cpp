@@ -1,6 +1,6 @@
 #include "StdAfx.h"
 #include <iostream>
-#include "boost/program_options.hpp"
+
 #include "ParamHelper.h"
 
 #include "cppunit/TestCase.h"
@@ -66,24 +66,15 @@ ParamHelper::ParamHelper(int argc, char* argv[])
 ParamHelper::~ParamHelper(void)
 {
 }
+
+boost::program_options::variables_map& ParamHelper::getParams()
+{
+  return this->vm;
+}
+
 //
 //void ParamHelper::log()
 //{
 //  std::cout << "log";
 //}
 
-void ParamHelper::dump(CppUnit::Test *test, std::string tree)
-{
-  if (0 == test) return;
-
-  std::cout << tree << test->getName() << std::endl;
-  tree.append("\t");
-  if (0 == test->getChildTestCount()) return;
-
-  for (int i = 0; i < test->getChildTestCount(); i++) {
-    
-    dump(test->getChildTestAt(i), tree);
-  }
-
-  return;
-}

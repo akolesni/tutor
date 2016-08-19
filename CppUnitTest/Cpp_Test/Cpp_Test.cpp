@@ -1,27 +1,29 @@
 #include "stdafx.h"
 
-#include <cassert>
-#include "cppunit/TestCase.h"
-#include "cppunit/extensions/TestFactoryRegistry.h"
-#include "cppunit/TestResult.h"
-#include "cppunit/TestResultCollector.h"
-#include "cppunit/TestRunner.h"
-#include "cppunit/BriefTestProgressListener.h"
-#include "cppunit/XmlOutputter.h"
+//#include <cassert>
+//#include "cppunit/TestCase.h"
+//#include "cppunit/extensions/TestFactoryRegistry.h"
+//#include "cppunit/TestResult.h"
+//#include "cppunit/TestResultCollector.h"
+//#include "cppunit/TestRunner.h"
+//#include "cppunit/BriefTestProgressListener.h"
+//#include "cppunit/XmlOutputter.h"
 //#include "PduTestBase.h"
 //#include "boost/program_options.hpp"
-#include "ParamHelper.h"
+//#include "ParamHelper.h"
 
 #define OUTPUT_RESULT_FILE "UnitTestApiResult.xml"
+#include "TesterManager.h"
 
 //namespace po=boost::program_options;
 
 int main(int argc, char* argv[])
 {
-  ParamHelper paramHelper(argc, argv);
+  TesterManager tester_manager;
+  return tester_manager.Start(argc, argv);
 
 
-  return 0;
+   
 
 
 
@@ -39,28 +41,28 @@ int main(int argc, char* argv[])
 
 
 
-    CPPUNIT_NS::Test*                       suite  = CPPUNIT_NS::TestFactoryRegistry::getRegistry().makeTest();
+    //CPPUNIT_NS::Test*                       suite  = CPPUNIT_NS::TestFactoryRegistry::getRegistry().makeTest();
 
 
-    assert(suite->getChildTestCount() == 3);
-    assert(suite->countTestCases() == 6);
-    assert(suite->getName()== "All Tests");
+    //assert(suite->getChildTestCount() == 3);
+    //assert(suite->countTestCases() == 6);
+    //assert(suite->getName()== "All Tests");
 
-    CPPUNIT_NS::Test* t1 = suite->getChildTestAt(0);
-    CPPUNIT_NS::Test* t2 = suite->getChildTestAt(1);
-    CPPUNIT_NS::Test* t3 = suite->getChildTestAt(2);
+    //CPPUNIT_NS::Test* t1 = suite->getChildTestAt(0);
+    //CPPUNIT_NS::Test* t2 = suite->getChildTestAt(1);
+    //CPPUNIT_NS::Test* t3 = suite->getChildTestAt(2);
 
-    assert(t1->getChildTestCount()== 2);
-    assert(t1->countTestCases()== 2);
+    //assert(t1->getChildTestCount()== 2);
+    //assert(t1->countTestCases()== 2);
 
-    CPPUNIT_NS::Test* t11 = t1->getChildTestAt(0);
-
-
-    std::string s = t11->getName();
+    //CPPUNIT_NS::Test* t11 = t1->getChildTestAt(0);
 
 
+    //std::string s = t11->getName();
 
-    int i = t11->getChildTestCount();
+
+
+    //int i = t11->getChildTestCount();
 
  //   //---------------------------------------
  //std::string testPath = (argc > 1) ? std::string(argv[1]) : "";
@@ -117,35 +119,35 @@ int main(int argc, char* argv[])
     //int i = ;
 
 
-    CppUnit::TestRunner                     Runner;
-    // Informs test-listener about testresults
-    CPPUNIT_NS::TestResult                  TestResult;
-    // register listener for collecting the test-results
-    CPPUNIT_NS::TestResultCollector         CollectedResults;
-    // register listener for per-test progress output
-    CPPUNIT_NS::BriefTestProgressListener   Progress;
-    //CLogger                                 logger;
-    bool                                    bSuccess = false;
+  //  CppUnit::TestRunner                     Runner;
+  //  // Informs test-listener about testresults
+  //  CPPUNIT_NS::TestResult                  TestResult;
+  //  // register listener for collecting the test-results
+  //  CPPUNIT_NS::TestResultCollector         CollectedResults;
+  //  // register listener for per-test progress output
+  //  CPPUNIT_NS::BriefTestProgressListener   Progress;
+  //  //CLogger                                 logger;
+  //  bool                                    bSuccess = false;
 
-    // register listener that collects the test results
-    TestResult.addListener(&CollectedResults);
-    // register listener that collects the result of each single test
-    TestResult.addListener(&Progress);
-    // add Test-Suite to test runner
-    //Runner.addTest(suite);
-    Runner.addTest(t11);
-    //Runner.addTest(t2);
+  //  // register listener that collects the test results
+  //  TestResult.addListener(&CollectedResults);
+  //  // register listener that collects the result of each single test
+  //  TestResult.addListener(&Progress);
+  //  // add Test-Suite to test runner
+  //  //Runner.addTest(suite);
+  //  Runner.addTest(t11);
+  //  //Runner.addTest(t2);
 
 
-    Runner.run(TestResult);
+  //  Runner.run(TestResult);
 
-    // Output results as XML
-    std::ofstream XmlFileOut(OUTPUT_RESULT_FILE);
-    CPPUNIT_NS::XmlOutputter XmlOut(&CollectedResults, XmlFileOut);
-    XmlOut.setStyleSheet("report.xsl");
-    XmlOut.write();
+  //  // Output results as XML
+  //  std::ofstream XmlFileOut(OUTPUT_RESULT_FILE);
+  //  CPPUNIT_NS::XmlOutputter XmlOut(&CollectedResults, XmlFileOut);
+  //  XmlOut.setStyleSheet("report.xsl");
+  //  XmlOut.write();
 
-		system("pause");
-  return 0;
+		//system("pause");
+  //return 0;
 }
 
