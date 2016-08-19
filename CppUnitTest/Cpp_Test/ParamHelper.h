@@ -18,10 +18,12 @@ public:
   ParamHelper(int argc, char* argv[]);
   ~ParamHelper(void);
 
-   boost::program_options::variables_map& getParams();
+   boost::program_options::variables_map& GetParams();
+   boost::program_options::options_description& GetDesc();
   //void log();
 private:
   boost::program_options::variables_map vm;
-  void dump(CppUnit::Test *test, std::string tree = "");
+  boost::program_options::options_description desc;
+  //void dump(CppUnit::Test *test, std::string tree = "");
 };
 
