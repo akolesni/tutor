@@ -45,6 +45,12 @@
     <ClInclude Include="include\BoostProgramOptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\BoostAsioTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BoostPropertyTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -72,6 +78,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\BoostProgramOptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BoostAsioTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BoostPropertyTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
