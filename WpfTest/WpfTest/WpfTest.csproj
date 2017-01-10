@@ -99,12 +99,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
     <Folder Include="Styles\" />
     <Folder Include="TemplateSelectors\" />
     <Folder Include="ViewsResources\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\vocom1.png" />
+    <Resource Include="Images\vocom2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

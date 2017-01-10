@@ -17,7 +17,7 @@ void BoostPropertyTree::Do()
 {
 	//this->Test1();
 	//this->Test2();
-	this->Test3();
+	this->TestKeyExist();
 }
 
 void BoostPropertyTree::Test1()
@@ -56,4 +56,44 @@ void BoostPropertyTree::Test3()
 	pt.put("Section1.Value1", "new");
 
 	boost::property_tree::ini_parser::write_ini("config.ini", pt);
+}
+
+void BoostPropertyTree::TestEraseKey()
+{
+
+  boost::property_tree::ptree pt;
+  boost::property_tree::ini_parser::read_ini("config.ini", pt);
+  std::cout << pt.get<std::string>("Section1.Value1") << std::endl;
+  std::cout << pt.get<std::string>("Section1.Value2") << std::endl;
+  //-------
+
+  pt.get_child("Section1").erase("Value1");
+
+  boost::property_tree::ini_parser::write_ini("config.ini", pt);
+
+}
+
+void BoostPropertyTree::TestKeyExist()
+{
+  boost::property_tree::ptree pt;
+  boost::property_tree::ini_parser::read_ini("config.ini", pt);
+
+  std::cout << "count Section1.Value1 " << pt.count("Section1.Value1") << std::endl;
+  std::cout << "count Section1 " << pt.count("Section1") << std::endl;
+  std::cout << "count Section1.Value2 " << pt.get_child("Section1").count("Value2") << std::endl;
+
+  //if ( pt.find("Section1.Value2") == pt.not_found())
+  //{
+  //  std::cout << "Section1.Value2 not found" << std::endl;
+  //}
+
+  //if (pt.find("Section1.Value1") == pt.not_found())
+  //{
+  //  std::cout << "Section1.Value1 not found" << std::endl;
+  //}
+
+
+  //std::cout << pt.get<std::string>("Section1.Value1") << std::endl;
+  std::cout << pt.get<std::string>("Section1.Value2") << std::endl;
+
 }

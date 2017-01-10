@@ -7,21 +7,21 @@
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Header Files\Test">
-      <UniqueIdentifier>{ea7a3e8c-5aed-4e80-a682-87b95f300823}</UniqueIdentifier>
+      <UniqueIdentifier>{ba9b5cb6-0ad3-4187-a91e-62333185531a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Test">
-      <UniqueIdentifier>{d30d3129-a62c-4eca-8780-0a4af26d2f42}</UniqueIdentifier>
+      <UniqueIdentifier>{703121e2-976f-4668-ae49-f58ca053d011}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReadMe.txt" />
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -30,31 +30,22 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\BoostAsioTest.h">
+    <ClInclude Include="TupleTest.h">
       <Filter>Header Files\Test</Filter>
     </ClInclude>
-    <ClInclude Include="include\BoostChrono.h">
+    <ClInclude Include="VectorTest.h">
       <Filter>Header Files\Test</Filter>
     </ClInclude>
-    <ClInclude Include="include\BoostDateTime.h">
+    <ClInclude Include="FunctionalTest.h">
       <Filter>Header Files\Test</Filter>
     </ClInclude>
-    <ClInclude Include="include\BoostFilesystem.h">
+    <ClInclude Include="AlgorithmTest.h">
       <Filter>Header Files\Test</Filter>
     </ClInclude>
-    <ClInclude Include="include\BoostLog.h">
+    <ClInclude Include="Cpp11_17Test.h">
       <Filter>Header Files\Test</Filter>
     </ClInclude>
-    <ClInclude Include="include\BoostProgramOptions.h">
-      <Filter>Header Files\Test</Filter>
-    </ClInclude>
-    <ClInclude Include="include\BoostPropertyTree.h">
-      <Filter>Header Files\Test</Filter>
-    </ClInclude>
-    <ClInclude Include="include\BoostStringTest.h">
-      <Filter>Header Files\Test</Filter>
-    </ClInclude>
-    <ClInclude Include="include\BoostTimer.h">
+    <ClInclude Include="StringTest.h">
       <Filter>Header Files\Test</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,34 +53,25 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BoostTest.cpp">
+    <ClCompile Include="StdTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\BoostAsioTest.cpp">
+    <ClCompile Include="TupleTest.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
-    <ClCompile Include="src\BoostChrono.cpp">
+    <ClCompile Include="VectorTest.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
-    <ClCompile Include="src\BoostDateTime.cpp">
+    <ClCompile Include="FunctionalTest.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
-    <ClCompile Include="src\BoostFilesystem.cpp">
+    <ClCompile Include="AlgorithmTest.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
-    <ClCompile Include="src\BoostLog.cpp">
+    <ClCompile Include="Cpp11_17Test.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
-    <ClCompile Include="src\BoostProgramOptions.cpp">
-      <Filter>Source Files\Test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\BoostPropertyTree.cpp">
-      <Filter>Source Files\Test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\BoostStringTest.cpp">
-      <Filter>Source Files\Test</Filter>
-    </ClCompile>
-    <ClCompile Include="src\BoostTimer.cpp">
+    <ClCompile Include="StringTest.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
   </ItemGroup>

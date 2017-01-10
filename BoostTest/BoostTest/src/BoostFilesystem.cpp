@@ -22,8 +22,9 @@ void BoostFilesystem::Do()
   //this->StatusTest();
   //this->ManipTest();
   //this->IteratorTest();
-  this->Dateistreams();
+  //this->Dateistreams();
   //auto s =  myPath02.string();
+  this->DirTest();
 }
 
 void BoostFilesystem::PathTest()
@@ -196,4 +197,23 @@ void BoostFilesystem::Dateistreams()
   //ofs.open(p);
 
   ofs << "Hello, world!\n";
+}
+
+void BoostFilesystem::DirTest()
+{
+  try
+  {
+    std::cout << boost::filesystem::current_path() << '\n';
+
+    boost::filesystem::directory_iterator it(boost::filesystem::current_path());
+    boost::filesystem::directory_iterator a;
+
+    size_t d = std::distance(it, a);
+
+    std::cout << "file count " << d << "\n";
+  }
+  catch (boost::filesystem::filesystem_error &e)
+  {
+    std::cerr << e.what() << '\n';
+  }
 }

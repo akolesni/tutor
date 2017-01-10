@@ -9,8 +9,7 @@
 
 #include <stdio.h>
 #include <tchar.h>
-#include <winsock2.h>
-#include <Windows.h>
+
 
 
 // TODO: reference additional headers your program requires here
