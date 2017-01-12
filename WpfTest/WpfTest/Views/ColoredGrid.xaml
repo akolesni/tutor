@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="WpfTest.Views.ColoredGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfTest"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+      
+    <Label Grid.Row="0" Content="1st Row" Background="{local:AltrnatingGridColorSimple ColorEven=Red, ColorOdd=Green}"></Label>
+    <Label Grid.Row="1" Content="2st Row" Background="{local:AltrnatingGridColorSimple ColorEven=Red, ColorOdd=Green}"></Label>
+    <Label Grid.Row="2" Content="3st Row" Background="{local:AltrnatingGridColorSimple ColorEven=Red, ColorOdd=Green}"></Label>
+    <Label Grid.Row="3" Content="4st Row" Background="{local:AltrnatingGridColorSimple ColorEven=Red, ColorOdd=Green}"></Label>
+    <Label Grid.Row="4" Content="5st Row" Background="{local:AltrnatingGridColorSimple ColorEven=Red, ColorOdd=Green}"></Label>
+  </Grid>
+</UserControl>
