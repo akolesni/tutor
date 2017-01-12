@@ -17,7 +17,65 @@
                     <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="37,30,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
                     <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="141,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332"/>
                 </Grid>
+            </TabItem>
+            <TabItem Header="RadioB">
+                <Grid>
+                    <Grid.Resources>
+                        <!-- Brushes for colours/backgrounds -->
+                        <!--<SolidColorBrush x:Key="FontBrush" Color="#000000"/>-->
 
+                        <!--<LinearGradientBrush x:Key="BgBrush1" StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Offset="0" Color="#888888"/>
+                            <GradientStop Offset="1" Color="#222222"/>
+                        </LinearGradientBrush>-->
+
+                        <!--<SolidColorBrush x:Key="BorderBrush1" Color="#333333"/>
+                        <LinearGradientBrush x:Key="CheckedBrush" StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Offset="0" Color="#555555"/>
+                            <GradientStop Offset="1" Color="#111111"/>
+                        </LinearGradientBrush>-->
+
+                        <!-- Left Button Template -->
+                        <ControlTemplate x:Key="ToggleButton" TargetType="{x:Type ToggleButton}">
+                            <Border
+                                Name="Border"
+                                Background="#E3F7D0"
+                                BorderBrush="#E3F7D0"
+                                BorderThickness="0"
+                                CornerRadius="0,0,0,0">
+                                <ContentPresenter
+                                    HorizontalAlignment="Center"
+                                    Margin="{TemplateBinding Padding}"
+                                    VerticalAlignment="Center"
+                                    Content="{TemplateBinding Content}"
+                                    TextBlock.FontWeight="Normal"
+                                    TextBlock.Foreground="#000000" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <!--<Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                                    <Setter TargetName="Border" Property="Background" Value="#F08080"/>
+                                </Trigger>-->
+                                <Trigger Property="IsChecked" Value="true">
+                                    <Setter TargetName="Border" Property="Background" Value="#C6EFA2"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+
+                    </Grid.Resources>
+
+                    <!-- Example Usage -->
+                    <Grid >
+                        <StackPanel Height="25" Orientation="Horizontal" Margin="5">
+                            
+                            <RadioButton Width="80" Content="Connection" GroupName="View" Padding="2" Template="{DynamicResource ToggleButton}" Margin="0,0,15,0"/>
+                            <RadioButton Width="80" Content="Status" GroupName="View" Padding="2" Template="{DynamicResource ToggleButton}" Margin="0,0,15,0"/>
+                            <RadioButton Width="80" Content="Software" GroupName="View" Padding="2" Template="{DynamicResource ToggleButton}" Margin="0,0,15,0"/>
+                            <RadioButton Width="80" Content="Information" GroupName="View" Padding="2" Template="{DynamicResource ToggleButton}" Margin="0,0,15,0"/>
+                            
+                        </StackPanel>
+                    </Grid>
+                    
+                </Grid>
             </TabItem>
             <TabItem Header="TabItem">
         <Grid>
@@ -101,5 +159,81 @@
         <vw:ColoredGrid></vw:ColoredGrid>
       </TabItem>
         </TabControl>
+      <TabItem Header="Icon">
+        <Grid Background="White">
+          <Border Height="50" Width="50" BorderThickness="0" BorderBrush="Black" Background="Aquamarine" CornerRadius="50,50,50,50" >
+            <Image Name="imgKlondike" Source="Images\vocom2.png" />
+          </Border>
+        </Grid>
+      </TabItem>
+      <TabItem Header="ListView">
+        <Grid Background="#FFE5E5E5">
+          
+          <Grid.Resources>
+            <!--<Style x:Key="MyContainer" TargetType="{x:Type ListViewItem}">
+
+              <Setter Property="Margin" Value="0,1,0,0"/>
+              <Setter Property="Height" Value="41"/>
+
+              <Style.Triggers>
+
+
+                <Trigger Property="IsMouseOver" Value="true">
+                  <Setter Property="Foreground" Value="Red" />
+                  <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+
+                <Trigger Property="IsSelected" Value="true">
+                  <Setter Property="Background" Value="#FFB26F6F" />
+                </Trigger>
+
+                <MultiTrigger>
+                  <MultiTrigger.Conditions>
+                    <Condition Property="IsSelected" Value="true" />
+                    <Condition Property="Selector.IsSelectionActive" Value="true" />
+                  </MultiTrigger.Conditions>
+                  <Setter Property="Foreground" Value="Yellow" />
+                </MultiTrigger>
+
+
+              </Style.Triggers>
+            </Style>-->
+            <Style TargetType="ListViewItem">
+              <Style.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" 
+                                 Color="Green"/>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}"
+                                 Color="Green"/>
+              </Style.Resources>
+            </Style>
+          </Grid.Resources>
+          
+          
+          <ListView Width="100" Height="100" Grid.Row="0" Grid.Column="0" Margin="10">
+            <ListViewItem >
+              <StackPanel Orientation="Horizontal">
+
+                <TextBlock>Green</TextBlock>
+              </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+              <StackPanel Orientation="Horizontal">
+
+                <TextBlock>Blue</TextBlock>
+              </StackPanel>
+            </ListViewItem>
+            <ListViewItem >
+              <StackPanel Orientation="Horizontal">
+
+                <TextBlock>Red</TextBlock>
+              </StackPanel>
+            </ListViewItem>
+          </ListView>
+        </Grid>
+      </TabItem>
+    </TabControl>
+
     </Grid>
 </Window>

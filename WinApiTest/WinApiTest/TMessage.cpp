@@ -25,11 +25,11 @@ void TMessage::sendToTRACEWIN()
   static int tracewin_sought = FALSE;
 
   // Establish connection to TRACEWIN:
-  if (!tracewin_sought) {
-    trace_hwnd = FindWindow(0, "TRACEWIN");
-    CiderClear();
-    tracewin_sought = TRUE;
-  }
+  //if (!tracewin_sought) {
+  //  trace_hwnd = FindWindow(0, "TRACEWIN");
+  //  CiderClear();
+  //  tracewin_sought = TRUE;
+  //}
 
 
 }
@@ -45,20 +45,20 @@ void TMessage::sendToTRACEWIN()
 
 void CiderClear()
 {
-#define ID_COPYDATA_CLEARMSG MAKELONG(MAKEWORD('c','l'),MAKEWORD('e','r'))
-	HWND trace_hwnd=0;
-	COPYDATASTRUCT txt_info;
-
-	// Establish connection to TRACEWIN:
-	if ((trace_hwnd=FindWindow(0, "TRACEWIN"))==0)
-		return;
-
-	txt_info.dwData=ID_COPYDATA_CLEARMSG;
-	txt_info.lpData=0;
-	txt_info.cbData=0;
-
-	// Send message to TRACEWIN:
-	SendMessage(trace_hwnd, WM_COPYDATA, 0, (LPARAM)&txt_info);
+//#define ID_COPYDATA_CLEARMSG MAKELONG(MAKEWORD('c','l'),MAKEWORD('e','r'))
+//	HWND trace_hwnd=0;
+//	COPYDATASTRUCT txt_info;
+//
+//	// Establish connection to TRACEWIN:
+//	if ((trace_hwnd=FindWindow(0, "TRACEWIN"))==0)
+//		return;
+//
+//	txt_info.dwData=ID_COPYDATA_CLEARMSG;
+//	txt_info.lpData=0;
+//	txt_info.cbData=0;
+//
+//	// Send message to TRACEWIN:
+//	SendMessage(trace_hwnd, WM_COPYDATA, 0, (LPARAM)&txt_info);
 }
 
 void CiderPrintf(char *form, ...)

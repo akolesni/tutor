@@ -10,5 +10,6 @@ public:
   void ManipTest();
   void IteratorTest();
   void Dateistreams();
+  void DirTest();
 };
 

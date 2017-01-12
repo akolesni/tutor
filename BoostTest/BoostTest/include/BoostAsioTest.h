@@ -5,5 +5,6 @@ public:
 	BoostAsioTest();
 	~BoostAsioTest();
 	void Do();
+  void TestUDP();
 };
 

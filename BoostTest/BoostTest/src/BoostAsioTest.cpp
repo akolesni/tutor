@@ -22,8 +22,6 @@ ip::udp::socket sock(service);
 boost::asio::ip::udp::endpoint sender_ep;
 char buff[512];
 
-
-
 void on_read(const boost::system::error_code & err, std::size_t read_bytes)
 {
 	std::cout << "read " << read_bytes << std::endl;
@@ -39,11 +37,16 @@ void on_read(const boost::system::error_code & err, std::size_t read_bytes)
 
 void BoostAsioTest::Do()
 {
-	ip::udp::endpoint ep(ip::address::from_string("169.254.255.100"), 13400);
+  //this->TestUDP();
+}
 
-	sock.open(ep.protocol());
-	sock.set_option(boost::asio::ip::udp::socket::reuse_address(true));
-	sock.bind(ep);
-	sock.async_receive_from(buffer(buff, 512), sender_ep, on_read);
-	service.run();
+void BoostAsioTest::TestUDP()
+{
+  ip::udp::endpoint ep(ip::address::from_string("169.254.255.100"), 13400);
+
+  sock.open(ep.protocol());
+  sock.set_option(boost::asio::ip::udp::socket::reuse_address(true));
+  sock.bind(ep);
+  sock.async_receive_from(buffer(buff, 512), sender_ep, on_read);
+  service.run();
 }
