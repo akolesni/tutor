@@ -4,9 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTest"
+                xmlns:vw="clr-namespace:WpfTest.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+
         <TabControl x:Name="tabControl" >
             <TabItem Header="TabItem">
                 <Grid Background="#FFE5E5E5">
@@ -148,6 +150,10 @@
           </ListView>
         </Grid>
       </TabItem>
+          
+          <TabItem Header="RB">
+            <vw:UCRBView/>
+          </TabItem>
     </TabControl>
 
     </Grid>
