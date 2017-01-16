@@ -7,6 +7,9 @@
                 xmlns:vw="clr-namespace:WpfTest.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+  <Window.Resources>
+    
+  </Window.Resources>
     <Grid>
 
         <TabControl x:Name="tabControl" >
@@ -75,13 +78,94 @@
                     
                 </Grid>
             </TabItem>
+            <TabItem Header="TabItem">
+        <Grid>
+          <Grid.Resources>
+            <!-- Brushes for colours/backgrounds -->
+            <SolidColorBrush x:Key="FontBrush" Color="#DDDDDD"/>
+
+            <LinearGradientBrush x:Key="BgBrush1" StartPoint="0,0" EndPoint="0,1">
+              <GradientStop Offset="0" Color="#888888"/>
+              <GradientStop Offset="1" Color="#222222"/>
+            </LinearGradientBrush>
+
+            <SolidColorBrush x:Key="BorderBrush1" Color="#333333"/>
+            <LinearGradientBrush x:Key="CheckedBrush" StartPoint="0,0" EndPoint="0,1">
+              <GradientStop Offset="0" Color="#555555"/>
+              <GradientStop Offset="1" Color="#111111"/>
+            </LinearGradientBrush>
+
+            <!-- Left Button Template -->
+            <ControlTemplate x:Key="ToggleButtonLeft" TargetType="{x:Type ToggleButton}">
+              <Border
+                Name="Border"
+                Background="{StaticResource BgBrush1}"
+                BorderBrush="{StaticResource BorderBrush1}"
+                BorderThickness="1"
+                CornerRadius="5,0,0,5">
+                <ContentPresenter
+                    HorizontalAlignment="Center"
+                    Margin="{TemplateBinding Padding}"
+                    VerticalAlignment="Center"
+                    Content="{TemplateBinding Content}"
+                    TextBlock.FontWeight="Bold"
+                    TextBlock.Foreground="{StaticResource FontBrush}"/>
+              </Border>
+              <ControlTemplate.Triggers>
+                <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                  <Setter TargetName="Border" Property="Background" Value="#808080"/>
+                </Trigger>
+                <Trigger Property="IsChecked" Value="true">
+                  <Setter TargetName="Border" Property="Background" Value="{StaticResource CheckedBrush}"/>
+                </Trigger>
+              </ControlTemplate.Triggers>
+            </ControlTemplate>
+
+            <!-- Middle Button(s) Template -->
+            <ControlTemplate x:Key="ToggleButtonMid" TargetType="{x:Type ToggleButton}">
+              <Border
+                Name="Border"
+                Background="{StaticResource BgBrush1}"
+                BorderBrush="{StaticResource BorderBrush1}"
+                BorderThickness="0,1,0,1"
+                CornerRadius="0" />
+              <!-- Other code identical to Left Button Template -->
+            </ControlTemplate>
+
+            <!-- Right Button Template -->
+            <ControlTemplate x:Key="ToggleButtonRight" TargetType="{x:Type ToggleButton}">
+              <Border
+                Name="Border"
+                Background="{StaticResource BgBrush1}"
+                BorderBrush="{StaticResource BorderBrush1}"
+                BorderThickness="1"
+                CornerRadius="0, 5, 5, 0" />
+              <!-- Other code identical to Left Button Template -->
+            </ControlTemplate>
+          </Grid.Resources>
+
+          <!-- Example Usage -->
+          <Grid Background="#555555">
+            <StackPanel  Height="25" Orientation="Horizontal" Margin="5">
+              <RadioButton Width="100" Content="All" GroupName="View" Padding="2" Template="{DynamicResource ToggleButtonLeft}"/>
+              <RadioButton Width="100" Content="Geolocated" GroupName="View" Padding="2" Template="{DynamicResource ToggleButtonMid}"/>
+              <RadioButton Width="100" Content="Non Geolocated" GroupName="View" Padding="2" Template="{DynamicResource ToggleButtonRight}"/>
+            </StackPanel>
+          </Grid>
+        </Grid>
+      </TabItem>
+
+
+      <TabItem Header="Mu">
+        <vw:ColoredGrid></vw:ColoredGrid>
+      </TabItem>
+        </TabControl>
       <TabItem Header="Icon">
         <Grid Background="White">
           <Border Height="50" Width="50" BorderThickness="0" BorderBrush="Black" Background="Aquamarine" CornerRadius="50,50,50,50" >
             <Image Name="imgKlondike" Source="Images\vocom2.png" />
           </Border>
         </Grid>
-
       </TabItem>
       <TabItem Header="ListView">
         <Grid Background="#FFE5E5E5">
