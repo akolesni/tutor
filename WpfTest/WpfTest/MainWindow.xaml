@@ -11,6 +11,7 @@
     
   </Window.Resources>
     <Grid>
+
         <TabControl x:Name="tabControl" >
             <TabItem Header="TabItem">
                 <Grid Background="#FFE5E5E5">
@@ -233,6 +234,10 @@
           </ListView>
         </Grid>
       </TabItem>
+          
+          <TabItem Header="RB">
+            <vw:UCRBView/>
+          </TabItem>
     </TabControl>
     </Grid>
 </Window>

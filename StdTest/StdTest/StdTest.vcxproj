@@ -148,6 +148,7 @@
     <ClInclude Include="AlgorithmTest.h" />
     <ClInclude Include="Cpp11_17Test.h" />
     <ClInclude Include="FunctionalTest.h" />
+    <ClInclude Include="StringHelpers.h" />
     <ClInclude Include="StringTest.h" />
     <ClInclude Include="TupleTest.h" />
     <ClInclude Include="stdafx.h" />
@@ -158,6 +159,7 @@
     <ClCompile Include="AlgorithmTest.cpp" />
     <ClCompile Include="Cpp11_17Test.cpp" />
     <ClCompile Include="FunctionalTest.cpp" />
+    <ClCompile Include="StringHelpers.cpp" />
     <ClCompile Include="StringTest.cpp" />
     <ClCompile Include="TupleTest.cpp" />
     <ClCompile Include="stdafx.cpp" />
