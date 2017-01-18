@@ -158,7 +158,7 @@
       <TabItem Header="Mu">
         <vw:ColoredGrid></vw:ColoredGrid>
       </TabItem>
-        </TabControl>
+
       <TabItem Header="Icon">
         <Grid Background="White">
           <Border Height="50" Width="50" BorderThickness="0" BorderBrush="Black" Background="Aquamarine" CornerRadius="50,50,50,50" >
@@ -234,6 +234,5 @@
         </Grid>
       </TabItem>
     </TabControl>
-
     </Grid>
 </Window>
