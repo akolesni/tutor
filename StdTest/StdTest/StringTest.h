@@ -14,5 +14,14 @@ private:
   void Str3(const std::string& strParam);
   void Str4(std::string&& strParam);
   void Str(std::string& strParam);
+
+  void TrimTest();
+  //static std::string& trim(std::string& strInput);
+  //static std::string& rtrim(std::string& strInput);
+  //static std::string& ltrim(std::string& strInput);
+  void LocaleTest();
+  void HtmlEncoding();
+  std::string& HtmlEncoding(std::string& strInput);
+  void TestReplace();
 };
 

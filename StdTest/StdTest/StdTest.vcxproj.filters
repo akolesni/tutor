@@ -48,6 +48,9 @@
     <ClInclude Include="StringTest.h">
       <Filter>Header Files\Test</Filter>
     </ClInclude>
+    <ClInclude Include="StringHelpers.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -72,6 +75,9 @@
       <Filter>Source Files\Test</Filter>
     </ClCompile>
     <ClCompile Include="StringTest.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="StringHelpers.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
   </ItemGroup>
