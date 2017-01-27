@@ -16,8 +16,10 @@ namespace ConsoleApplicationCsTest
       //Environment.CommandLine.
       //MefTest mefTest = new MefTest();
       //mefTest.Do();
-      StringTest stringTest = new StringTest();
-      stringTest.Do();
+      //StringTest stringTest = new StringTest();
+      //stringTest.Do();
+      DateTimeTest dateTimeTest = new DateTimeTest();
+      dateTimeTest.Do();
 
       //--------------------
       Console.ReadLine();
