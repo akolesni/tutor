@@ -45,5 +45,23 @@ namespace WpfTest
       Thread.Sleep(5000);
       return "Ta-dam! Here I am!\r\n";
     }
+
+    private void Window_Drop(object sender, DragEventArgs e)
+    {
+      string[] droppedFiles = null;
+      if (e.Data.GetDataPresent(DataFormats.FileDrop))
+      {
+        droppedFiles = e.Data.GetData(DataFormats.FileDrop, true) as string[];
+      }
+
+      if ((null == droppedFiles) || (!droppedFiles.Any())) { return; }
+
+      listFiles.Items.Clear();
+
+      foreach (string s in droppedFiles)
+      {
+        listFiles.Items.Add(s);
+      }
+    }
   }
 }
