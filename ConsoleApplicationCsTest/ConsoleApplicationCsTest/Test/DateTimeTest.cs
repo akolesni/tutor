@@ -13,13 +13,14 @@ namespace ConsoleApplicationCsTest.Test
        */
     public void Do()
     {
-      CreateDateTime();
+      //CreateDateTime();
       PrintDateTime();
     }
 
     private void PrintDateTime()
     {
       DateTime dateTime = DateTime.Now;
+      Console.WriteLine("yyyyMMddHHmmss - " + dateTime.ToString("yyyyMMddHHmmss"));
       Console.WriteLine("D - " + dateTime.ToString("D"));
       Console.WriteLine("d - " + dateTime.ToString("d"));
 

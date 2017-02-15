@@ -49,6 +49,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test\DateTimeTest.cs" />
+    <Compile Include="Test\RegexTest.cs" />
     <Compile Include="Test\StringTest.cs" />
   </ItemGroup>
   <ItemGroup>

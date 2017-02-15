@@ -18,8 +18,10 @@ namespace ConsoleApplicationCsTest
       //mefTest.Do();
       //StringTest stringTest = new StringTest();
       //stringTest.Do();
-      DateTimeTest dateTimeTest = new DateTimeTest();
-      dateTimeTest.Do();
+      //DateTimeTest dateTimeTest = new DateTimeTest();
+      //dateTimeTest.Do();
+      RegexTest regexTest = new RegexTest();
+      regexTest.Do();
 
       //--------------------
       Console.ReadLine();
