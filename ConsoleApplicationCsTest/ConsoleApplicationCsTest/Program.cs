@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApplicationCsTest
+﻿namespace ConsoleApplicationCsTest
 {
-  using ConsoleApplicationCsTest.MEF;
+  using System;
+
   using ConsoleApplicationCsTest.Test;
 
   internal class Program
@@ -20,11 +15,17 @@ namespace ConsoleApplicationCsTest
       //stringTest.Do();
       //DateTimeTest dateTimeTest = new DateTimeTest();
       //dateTimeTest.Do();
-      RegexTest regexTest = new RegexTest();
-      regexTest.Do();
+      //RegexTest regexTest = new RegexTest();
+      //regexTest.Do();
+      //LngTest lngTest = new LngTest();
+      //lngTest.Do();
+      StreamTest streamTest = new StreamTest();
+      streamTest.Do();
+      //XmlTest xmlTest = new XmlTest();
+      //xmlTest.Do();
 
       //--------------------
-      Console.ReadLine();
+      Console.Read();
     }
   }
 }
