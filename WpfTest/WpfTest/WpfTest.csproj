@@ -58,9 +58,19 @@
     </ApplicationDefinition>
     <Compile Include="BrushRoundConverter.cs" />
     <Compile Include="AltrnatingGridColorSimpleExtension.cs" />
+    <Compile Include="Controls\Ripple.cs" />
+    <Compile Include="Controls\RippleAssist.cs" />
+    <Compile Include="Controls\ShadowAssist.cs" />
+    <Compile Include="Converters\ShadowConverter.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\AnimView.xaml.cs">
       <DependentUpon>AnimView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UCButton.xaml.cs">
+      <DependentUpon>UCButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UCListBox.xaml.cs">
+      <DependentUpon>UCListBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UCRBView.xaml.cs">
       <DependentUpon>UCRBView.xaml</DependentUpon>
@@ -85,6 +95,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\AnimView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UCButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UCListBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

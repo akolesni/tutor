@@ -49,40 +49,67 @@ void TProcessMemory::Do()
   this->test1();
 }
 
+
 void TProcessMemory::test1()
 {
-  HANDLE processHandle = GetCurrentProcess();
-  DWORD processID = -1;
-
-  if (GetLastError() == false)
-  {
-    processID = GetProcessId(processHandle);
-
-    HANDLE processHandle = OpenProcess(PROCESS_ALL_ACCESS | PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, processID);
-
-    PROCESS_MEMORY_COUNTERS pmc;
-
-    GetProcessMemoryInfo(processHandle, &pmc, sizeof(pmc));
-    int start = pmc.WorkingSetSize;
-    size_t dif = 0;
-
+  size_t start = this->GetMamorySize();
     for (size_t a = 0; a < 100000; a++)
     {
-      start += 100;
-      BOOL result = GetProcessMemoryInfo(processHandle, &pmc, sizeof(pmc));
-      std::cout << ", memory usage " << pmc.WorkingSetSize << " + 100 " << start << " dif " << (pmc.WorkingSetSize - dif) << " B\n";
+
       Mem* m = new Mem;
-      dif = pmc.WorkingSetSize;
-      delete m;
+
+      //delete m;
     }
 
-    std::cout << "Mem size = " << sizeof(Mem) << std::endl;
-    //Mem* m = new Mem;
-    //result = GetProcessMemoryInfo(processHandle, &pmc, sizeof(pmc));
-    //std::cout << ", memory usage " << pmc.WorkingSetSize / 1024 << " kB\n";
-  }
-  else
-  {
+    Sleep(1000);
+  size_t end = this->GetMamorySize();
 
-  }
+  std::cout << "start -" << start << ", end - " << end << " dif " << (end - start) << std::endl;
+
+  //HANDLE processHandle = GetCurrentProcess();
+  //DWORD processID = -1;
+
+  //if (GetLastError() == false)
+  //{
+  //  processID = GetProcessId(processHandle);
+
+  //  HANDLE processHandle = OpenProcess(PROCESS_ALL_ACCESS | PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, processID);
+
+  //  PROCESS_MEMORY_COUNTERS pmc;
+
+  //  GetProcessMemoryInfo(processHandle, &pmc, sizeof(pmc));
+  //  int start = pmc.WorkingSetSize;
+  //  size_t dif = 0;
+
+  //  for (size_t a = 0; a < 100000; a++)
+  //  {
+  //    start += 100;
+  //    BOOL result = GetProcessMemoryInfo(processHandle, &pmc, sizeof(pmc));
+  //    std::cout << ", memory usage " << pmc.WorkingSetSize << " + 100 " << start << " dif " << (pmc.WorkingSetSize - dif) << " B\n";
+  //    Mem* m = new Mem;
+  //    dif = pmc.WorkingSetSize;
+  //    delete m;
+  //  }
+
+  //  std::cout << "Mem size = " << sizeof(Mem) << std::endl;
+  //  //Mem* m = new Mem;
+  //  //result = GetProcessMemoryInfo(processHandle, &pmc, sizeof(pmc));
+  //  //std::cout << ", memory usage " << pmc.WorkingSetSize / 1024 << " kB\n";
+  //}
+  //else
+  //{
+
+  //}
+}
+
+size_t TProcessMemory::GetMamorySize()
+{
+  HANDLE processHandle = GetCurrentProcess();
+  DWORD processID = GetProcessId(processHandle);
+  HANDLE currentProcessHandle = OpenProcess(PROCESS_ALL_ACCESS | PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, processID);
+
+  PROCESS_MEMORY_COUNTERS pmc;
+  GetProcessMemoryInfo(currentProcessHandle, &pmc, sizeof(pmc));
+
+  return pmc.WorkingSetSize;
 }

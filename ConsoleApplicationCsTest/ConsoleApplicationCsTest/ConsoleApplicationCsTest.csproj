@@ -52,6 +52,7 @@
     <Compile Include="MEF\MefTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\BoolTest.cs" />
     <Compile Include="Test\DateTimeTest.cs" />
     <Compile Include="Test\LngTest.cs" />
     <Compile Include="Test\RegexTest.cs" />

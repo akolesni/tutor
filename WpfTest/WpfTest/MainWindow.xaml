@@ -11,20 +11,61 @@
         AllowDrop="True"
         Drop="Window_Drop">
   <Grid>
+
+    <Grid.Resources>
+      <ResourceDictionary>
+        <Style x:Key="ReadOnlyTextBox" TargetType="TextBox">
+          <Setter Property="IsReadOnly" Value="True" />
+          <Setter Property="Padding" Value="5"/>
+          <Setter Property="Margin" Value="0"/>
+          <Setter Property="Background" Value="Transparent"/>
+          <Setter Property="BorderBrush" Value="Transparent"/>
+          <Setter Property="BorderThickness" Value="0"/>
+          <Setter Property="IsTabStop" Value="False"/>
+          <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+          <Setter Property="VerticalScrollBarVisibility" Value="Disabled"/>
+          <Setter Property="Template">
+            <Setter.Value>
+              <ControlTemplate TargetType="TextBox">
+                <Grid x:Name="RootElement">
+                  <ScrollViewer x:Name="ContentElement"
+                             Margin="{TemplateBinding Margin}"
+                             Background="{TemplateBinding Background}"
+                             BorderBrush="{TemplateBinding BorderBrush}"
+                             BorderThickness="{TemplateBinding BorderThickness}"
+                             IsTabStop="{TemplateBinding IsTabStop}"
+                             Padding="{TemplateBinding Padding}" 
+                             HorizontalScrollBarVisibility="{TemplateBinding HorizontalScrollBarVisibility}"
+                             VerticalScrollBarVisibility="{TemplateBinding VerticalScrollBarVisibility}"/>
+                </Grid>
+              </ControlTemplate>
+            </Setter.Value>
+          </Setter>
+        </Style>
+      </ResourceDictionary>
+    </Grid.Resources>
+
+
     <TabControl x:Name="tabControl">
       <TabItem Header="TabItem">
         <Grid Background="#FFE5E5E5">
           <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="24*"></RowDefinition>
+            <RowDefinition Height="13*"></RowDefinition>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="24*"></RowDefinition>
           </Grid.RowDefinitions>
           <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="37,30,0,0"
                   VerticalAlignment="Top" Width="75" Click="button_Click" />
-          <TextBox Grid.Row="0" x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="141,28,0,0"
-                   TextWrapping="Wrap" VerticalAlignment="Top" Width="332" />
-          <Label Grid.Row="1">Drop Files Here</Label>
-          <ListBox x:Name="listFiles" Grid.Row="2"></ListBox>
+          <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="165,30,0,0"
+               Style="{StaticResource ReadOnlyTextBox}" Text="Text"   TextWrapping="Wrap" VerticalAlignment="Top" Width="332" />
+          <Label Grid.Row="1" Grid.RowSpan="2">Drop Files Here</Label>
+          <ListBox x:Name="listFiles" Grid.Row="3"></ListBox>
+
+
+
+
+          <TextBlock Grid.Row="2" TextWrapping="Wrap" >My TextBlock</TextBlock>
         </Grid>
       </TabItem>
       <TabItem Header="RadioB">
@@ -202,6 +243,14 @@
       <TabItem Header="Anim">
         <vw:AnimView />
       </TabItem>
+      <TabItem Header="ListBox">
+        <vw:UCListBox />
+      </TabItem>
+      <TabItem Header="Button">
+        <vw:UCButton />
+      </TabItem>
     </TabControl>
+
+
   </Grid>
 </Window>

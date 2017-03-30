@@ -9,10 +9,10 @@
 
 int main()
 {
-  //TProcessMemory pm;
-  //pm.Do();
-  TestNetApi test_net_api;
-  test_net_api.Do();
+  TProcessMemory pm;
+  pm.Do();
+  //TestNetApi test_net_api;
+  //test_net_api.Do();
 
   system("pause");
   return 0;

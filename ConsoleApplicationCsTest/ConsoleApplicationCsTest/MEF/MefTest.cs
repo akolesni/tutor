@@ -17,15 +17,15 @@
     private ICarContract[] cars = null;
     public void Do()
     {
-
         var catalog = new DirectoryCatalog(".");
 
         var container = new CompositionContainer(catalog);
         container.ComposeParts(this);
 
         foreach (ICarContract contract in this.cars)
+        {
           Console.WriteLine(contract.StartEngine("Sebastian"));
-      
+        }
     }
 
   }

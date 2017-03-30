@@ -2,6 +2,7 @@
 {
   using System;
 
+  using ConsoleApplicationCsTest.MEF;
   using ConsoleApplicationCsTest.Test;
 
   internal class Program
@@ -19,10 +20,12 @@
       //regexTest.Do();
       //LngTest lngTest = new LngTest();
       //lngTest.Do();
-      StreamTest streamTest = new StreamTest();
-      streamTest.Do();
+      //StreamTest streamTest = new StreamTest();
+      //streamTest.Do();
       //XmlTest xmlTest = new XmlTest();
       //xmlTest.Do();
+      //BoolTest boolTest = new BoolTest();
+      //boolTest.Do();
 
       //--------------------
       Console.Read();
