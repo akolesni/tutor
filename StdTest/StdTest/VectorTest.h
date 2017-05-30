@@ -5,6 +5,7 @@ public:
   VectorTest();
   ~VectorTest();
   void Test1();
+  void Test2();
   void Do();
 };
 

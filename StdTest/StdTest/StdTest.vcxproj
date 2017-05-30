@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -28,13 +28,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
@@ -47,7 +47,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -148,6 +148,8 @@
     <ClInclude Include="AlgorithmTest.h" />
     <ClInclude Include="Cpp11_17Test.h" />
     <ClInclude Include="FunctionalTest.h" />
+    <ClInclude Include="MemoryTest.h" />
+    <ClInclude Include="StdTest.h" />
     <ClInclude Include="StringHelpers.h" />
     <ClInclude Include="StringTest.h" />
     <ClInclude Include="TupleTest.h" />
@@ -159,7 +161,7 @@
     <ClCompile Include="AlgorithmTest.cpp" />
     <ClCompile Include="Cpp11_17Test.cpp" />
     <ClCompile Include="FunctionalTest.cpp" />
-    <ClCompile Include="StringHelpers.cpp" />
+    <ClCompile Include="MemoryTest.cpp" />
     <ClCompile Include="StringTest.cpp" />
     <ClCompile Include="TupleTest.cpp" />
     <ClCompile Include="stdafx.cpp" />

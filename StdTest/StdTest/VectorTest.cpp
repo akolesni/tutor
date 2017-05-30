@@ -10,7 +10,8 @@ VectorTest::VectorTest()
 
 void VectorTest::Do()
 {
-  this->Test1();
+  //this->Test1();
+  this->Test2();
 }
 
 VectorTest::~VectorTest()
@@ -68,7 +69,9 @@ private:
   int i;
   float f;
 };
-
+/*
+https://habrahabr.ru/post/242639/
+*/
 void VectorTest::Test1()
 {
   std::vector<MyKlass> v;
@@ -85,5 +88,18 @@ void VectorTest::Test1()
   std::cout << "emplace_back-\n";
   v.emplace_back(2, 3.14f);
   std::cout << "emplace_back-\n\n\n";
+
+}
+
+void VectorTest::Test2()
+{
+  std::vector<size_t> v;
+
+  for(size_t i = 0; i < 1000; i++)
+  {
+    std::cout << v.size() << "\t" << v.capacity() <<"\t" << sizeof(v) << std::endl;
+    v.push_back(i);
+  }
+
 
 }

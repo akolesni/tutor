@@ -70,23 +70,23 @@ void StringTest::Str(std::string& strParam)
 }
 
 
-#include "StringHelpers.h"
-void StringTest::TrimTest()
-{
-  std::string string1 = "";
-  std::string string2 = "     ";
-  std::string string3 = "     sss";
-  std::string string4 = "sss     ";
-  std::string string5 = " \t    sss  \n  ";
-  std::string string6 = " \t\n\n s  s  s  ";
-
-  assert(StringHelpers::trim(string1) == "");
-  assert(StringHelpers::trim(string2) == "");
-  assert(StringHelpers::trim(string3) == "sss");
-  assert(StringHelpers::trim(string4) == "sss");
-  assert(StringHelpers::trim(string5) == "sss");
-  assert(StringHelpers::trim(string6) == "s  s  s");
-}
+//#include "StringHelpers.h"
+//void StringTest::TrimTest()
+//{
+//  std::string string1 = "";
+//  std::string string2 = "     ";
+//  std::string string3 = "     sss";
+//  std::string string4 = "sss     ";
+//  std::string string5 = " \t    sss  \n  ";
+//  std::string string6 = " \t\n\n s  s  s  ";
+//
+//  assert(StringHelpers::trim(string1) == "");
+//  assert(StringHelpers::trim(string2) == "");
+//  assert(StringHelpers::trim(string3) == "sss");
+//  assert(StringHelpers::trim(string4) == "sss");
+//  assert(StringHelpers::trim(string5) == "sss");
+//  assert(StringHelpers::trim(string6) == "s  s  s");
+//}
 
 
 #include <locale>

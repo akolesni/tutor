@@ -51,6 +51,12 @@
     <ClInclude Include="StringHelpers.h">
       <Filter>Header Files\Test</Filter>
     </ClInclude>
+    <ClInclude Include="MemoryTest.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="StdTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -77,7 +83,7 @@
     <ClCompile Include="StringTest.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
-    <ClCompile Include="StringHelpers.cpp">
+    <ClCompile Include="MemoryTest.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
   </ItemGroup>
