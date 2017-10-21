@@ -11,13 +11,14 @@
 #include "StringTest.h"
 #include "MemoryTest.h"
 #include "StdTest.h"
+#include "StreamTest.h"
 
 int main()
 {
   //TupleTest containerTest;
   //containerTest.Do();
-  VectorTest vector_test;
-  vector_test.Do();
+  //VectorTest vector_test;
+  //vector_test.Do();
   //FunctionalTest functional_test;
   //functional_test.Do();
   //AlgorithmTest algorithm;
@@ -28,6 +29,8 @@ int main()
   //string_test.Do();
   //MemoryTest memoryTest;
   //memoryTest.Do();
+  StreamTest streamTest;
+  streamTest.Do();
 
   system("pause");
   return 0;

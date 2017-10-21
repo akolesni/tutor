@@ -57,6 +57,9 @@
     <ClInclude Include="StdTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="StreamTest.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -84,6 +87,9 @@
       <Filter>Source Files\Test</Filter>
     </ClCompile>
     <ClCompile Include="MemoryTest.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamTest.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
   </ItemGroup>

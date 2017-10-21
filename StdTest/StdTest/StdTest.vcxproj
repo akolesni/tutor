@@ -22,7 +22,7 @@
     <ProjectGuid>{1F7A5397-9183-4B8D-8167-C148A9EC9CD2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>StdTest</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -41,7 +41,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -150,6 +150,7 @@
     <ClInclude Include="FunctionalTest.h" />
     <ClInclude Include="MemoryTest.h" />
     <ClInclude Include="StdTest.h" />
+    <ClInclude Include="StreamTest.h" />
     <ClInclude Include="StringHelpers.h" />
     <ClInclude Include="StringTest.h" />
     <ClInclude Include="TupleTest.h" />
@@ -162,6 +163,7 @@
     <ClCompile Include="Cpp11_17Test.cpp" />
     <ClCompile Include="FunctionalTest.cpp" />
     <ClCompile Include="MemoryTest.cpp" />
+    <ClCompile Include="StreamTest.cpp" />
     <ClCompile Include="StringTest.cpp" />
     <ClCompile Include="TupleTest.cpp" />
     <ClCompile Include="stdafx.cpp" />
