@@ -1,12 +1,5 @@
-/*
- * T.h
- *
- *  Created on: May 3, 2018
- *      Author: training
- */
-
-#ifndef BASE_H_
-#define BASE_H_
+#ifndef BASE_H
+#define BASE_H
 
 #include <iostream>
 
@@ -37,4 +30,4 @@ private:
 	int i;
 };
 
-#endif /* BASE_H_ */
+#endif // BASE_H

@@ -1,11 +1,3 @@
-/*
- * Handler.h
- *
- *  Created on: May 3, 2018
- *      Author: training
- */
-
-
 #ifndef UNUQUE_PTR_H
 #define UNUQUE_PTR_H
 

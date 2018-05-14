@@ -3,5 +3,5 @@ project(RAII)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES RAII.cpp)
+set(SOURCE_FILES RAII.cpp TestSharedPtr.cpp)
 add_executable(RAII ${SOURCE_FILES})
