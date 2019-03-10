@@ -2,6 +2,8 @@
 //
 #include "stdafx.h"
 #include <cstdlib>
+#include <iostream>
+#include <memory>
 // ---------
 #include "TupleTest.h"
 #include "VectorTest.h"
@@ -23,14 +25,22 @@ int main()
   //functional_test.Do();
   //AlgorithmTest algorithm;
   //algorithm.Do();
-  //Cpp11_17Test cpp11;
-  //cpp11.Do();
+  Cpp11_17Test cpp11;
+  cpp11.Do();
   //StringTest string_test;
   //string_test.Do();
   //MemoryTest memoryTest;
   //memoryTest.Do();
-  StreamTest streamTest;
-  streamTest.Do();
+  //StreamTest streamTest;
+  //streamTest.Do();
+
+  //std::cout << "Pointer safety: ";
+  //switch (std::get_pointer_safety()) {
+  //case std::pointer_safety::relaxed:   std::cout << "relaxed";   break;
+  //case std::pointer_safety::preferred: std::cout << "preferred"; break;
+  //case std::pointer_safety::strict:    std::cout << "strict";    break;
+  //}
+  //std::cout << '\n';
 
   system("pause");
   return 0;

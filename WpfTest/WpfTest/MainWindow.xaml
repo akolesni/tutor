@@ -10,25 +10,25 @@
         Width="525"
         AllowDrop="True"
         Drop="Window_Drop">
-  <Grid>
+    <Grid>
 
-    <Grid.Resources>
-      <ResourceDictionary>
-        <Style x:Key="ReadOnlyTextBox" TargetType="TextBox">
-          <Setter Property="IsReadOnly" Value="True" />
-          <Setter Property="Padding" Value="5"/>
-          <Setter Property="Margin" Value="0"/>
-          <Setter Property="Background" Value="Transparent"/>
-          <Setter Property="BorderBrush" Value="Transparent"/>
-          <Setter Property="BorderThickness" Value="0"/>
-          <Setter Property="IsTabStop" Value="False"/>
-          <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
-          <Setter Property="VerticalScrollBarVisibility" Value="Disabled"/>
-          <Setter Property="Template">
-            <Setter.Value>
-              <ControlTemplate TargetType="TextBox">
-                <Grid x:Name="RootElement">
-                  <ScrollViewer x:Name="ContentElement"
+        <Grid.Resources>
+            <ResourceDictionary>
+                <Style x:Key="ReadOnlyTextBox" TargetType="TextBox">
+                    <Setter Property="IsReadOnly" Value="True" />
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="Margin" Value="0"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="IsTabStop" Value="False"/>
+                    <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+                    <Setter Property="VerticalScrollBarVisibility" Value="Disabled"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TextBox">
+                                <Grid x:Name="RootElement">
+                                    <ScrollViewer x:Name="ContentElement"
                              Margin="{TemplateBinding Margin}"
                              Background="{TemplateBinding Background}"
                              BorderBrush="{TemplateBinding BorderBrush}"
@@ -37,220 +37,228 @@
                              Padding="{TemplateBinding Padding}" 
                              HorizontalScrollBarVisibility="{TemplateBinding HorizontalScrollBarVisibility}"
                              VerticalScrollBarVisibility="{TemplateBinding VerticalScrollBarVisibility}"/>
-                </Grid>
-              </ControlTemplate>
-            </Setter.Value>
-          </Setter>
-        </Style>
-      </ResourceDictionary>
-    </Grid.Resources>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ResourceDictionary>
+        </Grid.Resources>
 
 
-    <TabControl x:Name="tabControl">
-      <TabItem Header="TabItem">
-        <Grid Background="#FFE5E5E5">
-          <Grid.RowDefinitions>
-            <RowDefinition Height="24*"></RowDefinition>
-            <RowDefinition Height="13*"></RowDefinition>
-            <RowDefinition Height="11*"/>
-            <RowDefinition Height="24*"></RowDefinition>
-          </Grid.RowDefinitions>
-          <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="37,30,0,0"
+        <TabControl x:Name="tabControl">
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="24*"></RowDefinition>
+                        <RowDefinition Height="13*"></RowDefinition>
+                        <RowDefinition Height="11*"/>
+                        <RowDefinition Height="24*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="37,30,0,0"
                   VerticalAlignment="Top" Width="75" Click="button_Click" />
-          <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="165,30,0,0"
+                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="165,30,0,0"
                Style="{StaticResource ReadOnlyTextBox}" Text="Text"   TextWrapping="Wrap" VerticalAlignment="Top" Width="332" />
-          <Label Grid.Row="1" Grid.RowSpan="2">Drop Files Here</Label>
-          <ListBox x:Name="listFiles" Grid.Row="3"></ListBox>
+                    <Label Grid.Row="1" Grid.RowSpan="2">Drop Files Here</Label>
+                    <ListBox x:Name="listFiles" Grid.Row="3"></ListBox>
 
 
 
 
-          <TextBlock Grid.Row="2" TextWrapping="Wrap" >My TextBlock</TextBlock>
-        </Grid>
-      </TabItem>
-      <TabItem Header="RadioB">
-        <Grid>
-          <Grid.Resources>
-            <!-- Left Button Template -->
-            <ControlTemplate x:Key="ToggleButton" TargetType="{x:Type ToggleButton}">
-              <Border Name="Border"
+                    <TextBlock Grid.Row="2" TextWrapping="Wrap" >My TextBlock</TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Header="RadioB">
+                <Grid>
+                    <Grid.Resources>
+                        <!-- Left Button Template -->
+                        <ControlTemplate x:Key="ToggleButton" TargetType="{x:Type ToggleButton}">
+                            <Border Name="Border"
                       Background="#E3F7D0"
                       BorderBrush="#E3F7D0"
                       BorderThickness="0"
                       CornerRadius="0,0,0,0">
-                <ContentPresenter HorizontalAlignment="Center"
+                                <ContentPresenter HorizontalAlignment="Center"
                                   Margin="{TemplateBinding Padding}"
                                   VerticalAlignment="Center"
                                   Content="{TemplateBinding Content}"
                                   TextBlock.FontWeight="Normal"
                                   TextBlock.Foreground="#000000" />
-              </Border>
-              <ControlTemplate.Triggers>
-                <Trigger Property="IsChecked" Value="true">
-                  <Setter TargetName="Border" Property="Background" Value="#C6EFA2" />
-                </Trigger>
-              </ControlTemplate.Triggers>
-            </ControlTemplate>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="true">
+                                    <Setter TargetName="Border" Property="Background" Value="#C6EFA2" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
 
-          </Grid.Resources>
+                    </Grid.Resources>
 
-          <!-- Example Usage -->
-          <Grid>
-            <StackPanel Height="25" Orientation="Horizontal" Margin="5">
-              <RadioButton Width="80" Content="Connection" GroupName="View" Padding="2"
+                    <!-- Example Usage -->
+                    <Grid>
+                        <StackPanel Height="25" Orientation="Horizontal" Margin="5">
+                            <RadioButton Width="80" Content="Connection" GroupName="View" Padding="2"
                            Template="{DynamicResource ToggleButton}" Margin="0,0,15,0" />
-              <RadioButton Width="80" Content="Status" GroupName="View" Padding="2"
+                            <RadioButton Width="80" Content="Status" GroupName="View" Padding="2"
                            Template="{DynamicResource ToggleButton}" Margin="0,0,15,0" />
-              <RadioButton Width="80" Content="Software" GroupName="View" Padding="2"
+                            <RadioButton Width="80" Content="Software" GroupName="View" Padding="2"
                            Template="{DynamicResource ToggleButton}" Margin="0,0,15,0" />
-              <RadioButton Width="80" Content="Information" GroupName="View" Padding="2"
+                            <RadioButton Width="80" Content="Information" GroupName="View" Padding="2"
                            Template="{DynamicResource ToggleButton}" Margin="0,0,15,0" />
-            </StackPanel>
-          </Grid>
+                        </StackPanel>
+                    </Grid>
 
-        </Grid>
-      </TabItem>
-      <TabItem Header="TabItem">
-        <Grid>
-          <Grid.Resources>
-            <!-- Brushes for colours/backgrounds -->
-            <SolidColorBrush x:Key="FontBrush" Color="#DDDDDD" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid>
+                    <Grid.Resources>
+                        <!-- Brushes for colours/backgrounds -->
+                        <SolidColorBrush x:Key="FontBrush" Color="#DDDDDD" />
 
-            <LinearGradientBrush x:Key="BgBrush1" StartPoint="0,0" EndPoint="0,1">
-              <GradientStop Offset="0" Color="#888888" />
-              <GradientStop Offset="1" Color="#222222" />
-            </LinearGradientBrush>
+                        <LinearGradientBrush x:Key="BgBrush1" StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Offset="0" Color="#888888" />
+                            <GradientStop Offset="1" Color="#222222" />
+                        </LinearGradientBrush>
 
-            <SolidColorBrush x:Key="BorderBrush1" Color="#333333" />
-            <LinearGradientBrush x:Key="CheckedBrush" StartPoint="0,0" EndPoint="0,1">
-              <GradientStop Offset="0" Color="#555555" />
-              <GradientStop Offset="1" Color="#111111" />
-            </LinearGradientBrush>
+                        <SolidColorBrush x:Key="BorderBrush1" Color="#333333" />
+                        <LinearGradientBrush x:Key="CheckedBrush" StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Offset="0" Color="#555555" />
+                            <GradientStop Offset="1" Color="#111111" />
+                        </LinearGradientBrush>
 
-            <!-- Left Button Template -->
-            <ControlTemplate x:Key="ToggleButtonLeft" TargetType="{x:Type ToggleButton}">
-              <Border Name="Border"
+                        <!-- Left Button Template -->
+                        <ControlTemplate x:Key="ToggleButtonLeft" TargetType="{x:Type ToggleButton}">
+                            <Border Name="Border"
                       Background="{StaticResource BgBrush1}"
                       BorderBrush="{StaticResource BorderBrush1}"
                       BorderThickness="1"
                       CornerRadius="5,0,0,5">
-                <ContentPresenter HorizontalAlignment="Center"
+                                <ContentPresenter HorizontalAlignment="Center"
                                   Margin="{TemplateBinding Padding}"
                                   VerticalAlignment="Center"
                                   Content="{TemplateBinding Content}"
                                   TextBlock.FontWeight="Bold"
                                   TextBlock.Foreground="{StaticResource FontBrush}" />
-              </Border>
-              <ControlTemplate.Triggers>
-                <Trigger Property="ToggleButton.IsMouseOver" Value="true">
-                  <Setter TargetName="Border" Property="Background" Value="#808080" />
-                </Trigger>
-                <Trigger Property="IsChecked" Value="true">
-                  <Setter TargetName="Border" Property="Background" Value="{StaticResource CheckedBrush}" />
-                </Trigger>
-              </ControlTemplate.Triggers>
-            </ControlTemplate>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                                    <Setter TargetName="Border" Property="Background" Value="#808080" />
+                                </Trigger>
+                                <Trigger Property="IsChecked" Value="true">
+                                    <Setter TargetName="Border" Property="Background" Value="{StaticResource CheckedBrush}" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
 
-            <!-- Middle Button(s) Template -->
-            <ControlTemplate x:Key="ToggleButtonMid" TargetType="{x:Type ToggleButton}">
-              <Border Name="Border"
+                        <!-- Middle Button(s) Template -->
+                        <ControlTemplate x:Key="ToggleButtonMid" TargetType="{x:Type ToggleButton}">
+                            <Border Name="Border"
                       Background="{StaticResource BgBrush1}"
                       BorderBrush="{StaticResource BorderBrush1}"
                       BorderThickness="0,1,0,1"
                       CornerRadius="0" />
-              <!-- Other code identical to Left Button Template -->
-            </ControlTemplate>
+                            <!-- Other code identical to Left Button Template -->
+                        </ControlTemplate>
 
-            <!-- Right Button Template -->
-            <ControlTemplate x:Key="ToggleButtonRight" TargetType="{x:Type ToggleButton}">
-              <Border Name="Border"
+                        <!-- Right Button Template -->
+                        <ControlTemplate x:Key="ToggleButtonRight" TargetType="{x:Type ToggleButton}">
+                            <Border Name="Border"
                       Background="{StaticResource BgBrush1}"
                       BorderBrush="{StaticResource BorderBrush1}"
                       BorderThickness="1"
                       CornerRadius="0, 5, 5, 0" />
-              <!-- Other code identical to Left Button Template -->
-            </ControlTemplate>
-          </Grid.Resources>
+                            <!-- Other code identical to Left Button Template -->
+                        </ControlTemplate>
+                    </Grid.Resources>
 
-          <!-- Example Usage -->
-          <Grid Background="#555555">
-            <StackPanel Height="25" Orientation="Horizontal" Margin="5">
-              <RadioButton Width="100" Content="All" GroupName="View" Padding="2"
+                    <!-- Example Usage -->
+                    <Grid Background="#555555">
+                        <StackPanel Height="25" Orientation="Horizontal" Margin="5">
+                            <RadioButton Width="100" Content="All" GroupName="View" Padding="2"
                            Template="{DynamicResource ToggleButtonLeft}" />
-              <RadioButton Width="100" Content="Geolocated" GroupName="View" Padding="2"
+                            <RadioButton Width="100" Content="Geolocated" GroupName="View" Padding="2"
                            Template="{DynamicResource ToggleButtonMid}" />
-              <RadioButton Width="100" Content="Non Geolocated" GroupName="View" Padding="2"
+                            <RadioButton Width="100" Content="Non Geolocated" GroupName="View" Padding="2"
                            Template="{DynamicResource ToggleButtonRight}" />
-            </StackPanel>
-          </Grid>
-        </Grid>
-      </TabItem>
-      <TabItem Header="Mu">
-        <vw:ColoredGrid></vw:ColoredGrid>
-      </TabItem>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Mu">
+                <vw:ColoredGrid></vw:ColoredGrid>
+            </TabItem>
 
-      <TabItem Header="Icon">
-        <Grid Background="White">
-          <Border Height="50" Width="50" BorderThickness="0" BorderBrush="Black" Background="Aquamarine"
+            <TabItem Header="Icon">
+                <Grid Background="White">
+                    <Border Height="50" Width="50" BorderThickness="0" BorderBrush="Black" Background="Aquamarine"
                   CornerRadius="50,50,50,50">
-            <Image Name="imgKlondike" Source="Images\vocom2.png" />
-          </Border>
-        </Grid>
-      </TabItem>
-      <TabItem Header="ListView">
-        <Grid Background="#FFE5E5E5">
-          <Grid.Resources>
-            <Style TargetType="ListViewItem">
-              <Style.Resources>
-                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}"
+                        <Image Name="imgKlondike" Source="Images\vocom2.png" />
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="ListView">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.Resources>
+                        <Style TargetType="ListViewItem">
+                            <Style.Resources>
+                                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}"
                                  Color="Green" />
-                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
+                                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
                                  Color="Transparent" />
-                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}"
+                                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}"
                                  Color="Green" />
-              </Style.Resources>
-            </Style>
-          </Grid.Resources>
+                            </Style.Resources>
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="34*"/>
+                        <ColumnDefinition Width="39*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="39*"/>
+                        <RowDefinition Height="58*"/>
+                    </Grid.RowDefinitions>
 
 
-          <ListView Width="100" Height="100" Grid.Row="0" Grid.Column="0" Margin="10">
-            <ListViewItem>
-              <StackPanel Orientation="Horizontal">
+                    <ListView Width="100" Height="100" Grid.Row="0" Grid.Column="0" >
+                        <ListViewItem>
+                            <StackPanel Orientation="Horizontal">
 
-                <TextBlock>Green</TextBlock>
-              </StackPanel>
-            </ListViewItem>
-            <ListViewItem>
-              <StackPanel Orientation="Horizontal">
+                                <TextBlock>Green</TextBlock>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <StackPanel Orientation="Horizontal">
 
-                <TextBlock>Blue</TextBlock>
-              </StackPanel>
-            </ListViewItem>
-            <ListViewItem>
-              <StackPanel Orientation="Horizontal">
-                <TextBlock>Red</TextBlock>
-              </StackPanel>
-            </ListViewItem>
-          </ListView>
-        </Grid>
-      </TabItem>
-      <TabItem Header="RB">
-        <vw:UCRBView />
-      </TabItem>
-      <TabItem Header="Valid">
-        <vw:ValidationView />
-      </TabItem>
-      <TabItem Header="Anim">
-        <vw:AnimView />
-      </TabItem>
-      <TabItem Header="ListBox">
-        <vw:UCListBox />
-      </TabItem>
-      <TabItem Header="Button">
-        <vw:UCButton />
-      </TabItem>
-    </TabControl>
+                                <TextBlock>Blue</TextBlock>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Red</TextBlock>
+                            </StackPanel>
+                        </ListViewItem>
+                    </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="RB">
+                <vw:UCRBView />
+            </TabItem>
+            <TabItem Header="Valid">
+                <vw:ValidationView />
+            </TabItem>
+            <TabItem Header="Anim">
+                <vw:AnimView />
+            </TabItem>
+            <TabItem Header="ListBox">
+                <vw:UCListBox />
+            </TabItem>
+            <TabItem Header="Button">
+                <vw:UCButton />
+            </TabItem>
+        </TabControl>
 
 
-  </Grid>
+    </Grid>
 </Window>

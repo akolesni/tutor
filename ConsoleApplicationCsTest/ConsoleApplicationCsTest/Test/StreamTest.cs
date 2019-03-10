@@ -23,11 +23,44 @@
   {
     public void Do()
     {
-      this.TestZip();
+            this.OpenZipTest();
+      //this.TestZip();
       //this.Test7Zip();
     }
 
-    private void TestZip()
+        private void OpenZipTest()
+        {
+
+
+            string zipPath = @"c:\example\start.zip";
+            string extractPath = @"c:\example\extract";
+
+      using (FileStream zipToOpen = new FileStream(zipPath, FileMode.Open))
+      {
+        using (ZipArchive archive = new ZipArchive(zipToOpen, ZipArchiveMode.Read))
+        {
+          ZipFileExtensions.ExtractToDirectory(archive, extractPath);
+        }
+
+      }
+
+
+      //using (ZipArchive archive = ZipFile.OpenRead(zipPath))
+      //      {
+
+      //        ZipFileExtensions.ExtractToDirectory(archive, extractPath);
+      //          //foreach (ZipArchiveEntry entry in archive.Entries)
+      //          //{
+      //          //    //if (entry.FullName.EndsWith(".txt", StringComparison.OrdinalIgnoreCase))
+      //          //    //{
+      //          //        entry.ExtractToFile(Path.Combine(extractPath, entry.FullName));
+      //        //    //}
+      //          //}
+      //}  
+
+        }
+
+        private void TestZip()
     {
       Address address = new Address();
       address.FirstName = "Ivanov";

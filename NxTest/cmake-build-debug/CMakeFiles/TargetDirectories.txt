@@ -1,0 +1,3 @@
+C:/workspace/github/tutor/NxTest/cmake-build-debug/CMakeFiles/NxTest.dir
+C:/workspace/github/tutor/NxTest/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/workspace/github/tutor/NxTest/cmake-build-debug/CMakeFiles/rebuild_cache.dir

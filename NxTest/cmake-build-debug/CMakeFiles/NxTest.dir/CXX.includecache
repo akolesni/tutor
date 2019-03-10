@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/workspace/github/tutor/NxTest/FileTest.cpp
+FileTest.h
+C:/workspace/github/tutor/NxTest/FileTest.h
+
+C:/workspace/github/tutor/NxTest/FileTest.h
+
+C:/workspace/github/tutor/NxTest/main.cpp
+iostream
+-
+FileTest.h
+C:/workspace/github/tutor/NxTest/FileTest.h
+

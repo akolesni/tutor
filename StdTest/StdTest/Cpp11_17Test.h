@@ -9,4 +9,5 @@ public:
 private:
   void TestNullPtr();
   [[deprecated("TestDigitSeparators is deprecated")]] void TestDigitSeparators();
+  void TestSmartPointer();
 };

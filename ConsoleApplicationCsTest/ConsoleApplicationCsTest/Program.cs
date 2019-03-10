@@ -4,6 +4,7 @@
 
   using ConsoleApplicationCsTest.MEF;
   using ConsoleApplicationCsTest.Test;
+  using ConsoleApplicationCsTest.Db;
 
   internal class Program
   {
@@ -20,12 +21,15 @@
       //regexTest.Do();
       //LngTest lngTest = new LngTest();
       //lngTest.Do();
-      //StreamTest streamTest = new StreamTest();
-      //streamTest.Do();
+      StreamTest streamTest = new StreamTest();
+      streamTest.Do();
       //XmlTest xmlTest = new XmlTest();
       //xmlTest.Do();
       //BoolTest boolTest = new BoolTest();
       //boolTest.Do();
+
+      //SqliteTest sqliteTest = new SqliteTest();
+      //sqliteTest.Do();
 
       //--------------------
       Console.Read();

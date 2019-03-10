@@ -15,7 +15,8 @@ Cpp11_17Test::~Cpp11_17Test()
 void Cpp11_17Test::Do()
 {
   //this->TestNullPtr();
-  this->TestDigitSeparators();
+  //this->TestDigitSeparators();
+  this->TestSmartPointer();
 }
 
 void foo(int* p)
@@ -72,4 +73,39 @@ void Cpp11_17Test::TestDigitSeparators()
   int a3 = 1'000'000;
 
   std::cout << "a3 " << a3 << std::endl;
+}
+
+
+struct MyStruct
+{
+  int a = 0;
+  void toString() {
+    std::cout << "MyStruct: a=" << this->a << std::endl;
+  }
+
+};
+
+template<typename T>
+class MyClass;
+
+
+void incrementMyStruct(MyStruct& _ms) {
+  _ms.a++;
+}
+
+void Cpp11_17Test::TestSmartPointer()
+{
+  auto m = std::make_unique<MyStruct>();
+
+  m->toString();
+
+  ::incrementMyStruct(*m);
+  ::incrementMyStruct(*m);
+  ::incrementMyStruct(*m);
+  ::incrementMyStruct(*m);
+
+  m->toString();
+
+  //MyClass<decltype(m)> mType;
+
 }
